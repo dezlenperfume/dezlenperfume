@@ -1,0 +1,321 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Why Dezlen Perfume</title>
+    <link rel="icon" type="image/png" href="Images/photo_6224202121180461580_c-removebg-previe-removebg-preview.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            background-color: #f9f6f2;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            background-color: #1f1f1f;
+            color: #fff;
+            padding: 20px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.8em;
+            font-family: 'Georgia', serif;
+            color: #f4e3d7;
+            font-weight: bold;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+            .logo:hover {
+                color: #d2a46d;
+            }
+
+        /* Unique Video Section */
+        .unique-section {
+            background-color: #fff9f4;
+            padding: 60px 5%;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 2.2rem;
+            color: #7b4b1c;
+            margin-bottom: 40px;
+            font-weight: bold;
+            position: relative;
+            display: inline-block;
+        }
+
+            .section-title::after {
+                content: '';
+                position: absolute;
+                width: 60%;
+                height: 3px;
+                background: #d2a46d;
+                bottom: -10px;
+                left: 20%;
+            }
+
+        .video-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .video-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+            .video-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+            }
+
+        .video-grid iframe {
+            width: 100%;
+            height: 200px;
+            border: none;
+            display: block;
+        }
+
+        .video-caption {
+            padding: 15px;
+            font-weight: 500;
+            color: #555;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #eee;
+            padding: 40px 5%;
+            text-align: center;
+            font-size: 0.9em;
+            color: #666;
+            margin-top: 60px;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 30px;
+            text-align: left;
+        }
+
+        .footer-column {
+            flex: 1;
+            min-width: 200px;
+        }
+
+            .footer-column h4 {
+                margin-bottom: 15px;
+                color: #8c5e3c;
+                font-size: 1.1rem;
+            }
+
+            .footer-column ul {
+                list-style: none;
+            }
+
+            .footer-column a {
+                text-decoration: none;
+                color: #666;
+                display: block;
+                margin-bottom: 8px;
+                transition: color 0.3s;
+            }
+
+                .footer-column a:hover {
+                    color: #8c5e3c;
+                }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+            .social-links a {
+                color: #8c5e3c;
+                font-size: 1.5em;
+                transition: color 0.3s;
+            }
+
+                .social-links a:hover {
+                    color: #a2673f;
+                }
+
+        .footer-divider {
+            margin: 30px auto;
+            border: 0.5px solid #ccc;
+            max-width: 1200px;
+        }
+
+        .copyright {
+            text-align: center;
+            color: #888;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header {
+                padding: 15px 5%;
+                justify-content: center;
+            }
+
+            .logo {
+                font-size: 1.6em;
+                margin-bottom: 10px;
+            }
+
+            .unique-section {
+                padding: 40px 5%;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+                margin-bottom: 30px;
+            }
+
+            .video-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+                .video-grid iframe {
+                    height: 180px;
+                }
+
+            .footer-column {
+                min-width: 100%;
+                text-align: center;
+            }
+
+            .social-links {
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .section-title {
+                font-size: 1.5rem;
+            }
+
+            .video-grid iframe {
+                height: 160px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <a href="home.html" class="logo">Dezlen Perfume</a>
+    </header>
+
+    <!-- Unique Video Section -->
+    <section class="unique-section">
+        <div class="video-container">
+            <h2 class="section-title">Why Dezlen Perfume</h2>
+            <div class="video-grid">
+                <div class="video-card">
+                    <iframe src="videos/Dezlen.mp4" frameborder="0" allowfullscreen></iframe>
+                    <div class="video-caption">About Dezlen</div>
+                </div>
+                <div class="video-card">
+                    <iframe src="videos/Gucty.mp4" frameborder="0" allowfullscreen></iframe>
+                    <div class="video-caption">About Gutcy</div>
+                </div>
+                <div class="video-card">
+                    <iframe src="videos/Chaolate.mp4" frameborder="0" allowfullscreen></iframe>
+                    <div class="video-caption">About Chocolate</div>
+                </div>
+                <div class="video-card">
+                    <iframe src="videos/Extreme.mp4" frameborder="0" allowfullscreen></iframe>
+                    <div class="video-caption">About Extreme</div>
+                </div>
+                <div class="video-card">
+                    <iframe src="videos/You are the Change..mp4" frameborder="0" allowfullscreen></iframe>
+                    <div class="video-caption">About Only Choice</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h4>About Dezlen</h4>
+                <p>Dezlen Perfume is your ultimate destination for luxurious and long-lasting fragrances. Discover scents that make memories.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="why-dezlen.html">Why Dezlen Perfume</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Contact Us</h4>
+                <p>Email: support@dezlenperfume.com</p>
+                <p>Phone: 8438212882</p>
+                <p>Address: Broadway Chennai-600001</p>
+            </div>
+            <div class="footer-column">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/dezlen.official/" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.facebook.com" target="_blank">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="https://t.me/Asfakdezlen" target="_blank">
+                        <i class="fab fa-telegram"></i>
+                    </a>
+                    <a href="https://wa.me/8438212882" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <hr class="footer-divider">
+        <p class="copyright">&copy; 2025 Dezlen Perfume. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

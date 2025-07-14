@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shop - Dezlen Perfume</title>
+    <link rel="icon" type="image/png" href="Images/photo_6224202121180461580_c-removebg-previe-removebg-preview.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            background-color: #f9f6f2;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            background-color: #1f1f1f;
+            color: #fff;
+            padding: 20px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.8em;
+            font-family: 'Georgia', serif;
+            color: #f4e3d7;
+            font-weight: bold;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .logo:hover {
+            color: #d2a46d;
+        }
+
+        /* Main Content */
+        .shop-section {
+            padding: 40px 5%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .promo-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .main-promo {
+            background: #f4f1ee;
+            padding: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .promo-content {
+            flex: 1;
+            text-align: left;
+            padding-right: 20px;
+        }
+
+        .promo-tag {
+            color: #a87b4e;
+            font-weight: bold;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+        }
+
+        .promo-title {
+            font-size: 2.2rem;
+            margin: 10px 0;
+            line-height: 1.2;
+            color: #1a1a1a;
+        }
+
+        .promo-price {
+            color: #a87b4e;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin: 15px 0;
+        }
+
+        .price-value {
+            color: #d4a953;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #8b5e3c;
+            color: #fff;
+            padding: 12px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background-color 0.3s;
+            border: none;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+
+        .btn:hover {
+            background-color: #a2673f;
+        }
+
+        .promo-image {
+            max-height: 260px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .side-promos {
+            display: grid;
+            gap: 20px;
+        }
+
+        .promo-item {
+            background: #f9f6f3;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+
+        .promo-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .promo-item-image {
+            width: 90px;
+            height: 90px;
+            object-fit: contain;
+            margin-right: 15px;
+        }
+
+        .promo-item-content {
+            flex: 1;
+            text-align: left;
+        }
+
+        .promo-item-title {
+            margin-bottom: 5px;
+            font-size: 1.1rem;
+            color: #333;
+        }
+
+        .promo-item-desc {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 8px;
+        }
+
+        .promo-item-link {
+            font-size: 0.85rem;
+            color: #000;
+            text-decoration: underline;
+            transition: color 0.3s;
+        }
+
+        .promo-item-link:hover {
+            color: #8b5e3c;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #eee;
+            padding: 40px 5%;
+            text-align: center;
+            font-size: 0.9em;
+            color: #666;
+            margin-top: 60px;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 30px;
+            text-align: left;
+        }
+
+        .footer-column {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .footer-column h4 {
+            margin-bottom: 15px;
+            color: #8c5e3c;
+            font-size: 1.1rem;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column a {
+            text-decoration: none;
+            color: #666;
+            display: block;
+            margin-bottom: 8px;
+            transition: color 0.3s;
+        }
+
+        .footer-column a:hover {
+            color: #8c5e3c;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .social-links a {
+            color: #8c5e3c;
+            font-size: 1.5em;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: #a2673f;
+        }
+
+        .footer-divider {
+            margin: 30px auto;
+            border: 0.5px solid #ccc;
+            max-width: 1200px;
+        }
+
+        .copyright {
+            text-align: center;
+            color: #888;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .promo-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .main-promo {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .promo-content {
+                padding-right: 0;
+                margin-bottom: 20px;
+                text-align: center;
+            }
+
+            .promo-image {
+                margin: 0 auto;
+            }
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 15px 5%;
+                justify-content: center;
+            }
+
+            .logo {
+                font-size: 1.6em;
+                margin-bottom: 10px;
+            }
+
+            .promo-title {
+                font-size: 1.8rem;
+            }
+
+            .promo-item {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .promo-item-image {
+                margin-right: 0;
+                margin-bottom: 15px;
+            }
+
+            .promo-item-content {
+                text-align: center;
+            }
+
+            .footer-column {
+                min-width: 100%;
+                text-align: center;
+            }
+
+            .social-links {
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .promo-title {
+                font-size: 1.5rem;
+            }
+
+            .promo-tag {
+                font-size: 0.8rem;
+            }
+
+            .btn {
+                padding: 10px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <a href="home.html" class="logo">Dezlen Perfume</a>
+    </header>
+
+    <!-- Shop Section -->
+    <section class="shop-section">
+        <div class="promo-grid">
+            <!-- Main Promo -->
+            <div class="main-promo">
+                <div class="promo-content">
+                    <p class="promo-tag">TAKE A PERFUME</p>
+                    <h2 class="promo-title">Up To 25% Off<br>Order Now</h2>
+                    <p class="promo-price">Save Price: <span class="price-value">70 Rs</span></p>
+                    <a href="#" class="btn">SHOP NOW</a>
+                </div>
+                <img src="Images/1234456.jpeg" alt="Perfume" class="promo-image">
+            </div>
+
+            <!-- Side Promos -->
+            <div class="side-promos">
+                <!-- Gutcy -->
+                <div class="promo-item">
+                    <img src="Images/fffggghhh-removebg-previe.jpeg" alt="Gutcy" class="promo-item-image">
+                    <div class="promo-item-content">
+                        <h3 class="promo-item-title">Gutcy</h3>
+                        <p class="promo-item-desc">Mild and Soft</p>
+                        <a href="#" class="promo-item-link">SHOP NOW</a>
+                    </div>
+                </div>
+
+                <!-- Extreme -->
+                <div class="promo-item">
+                    <img src="Images/fffggghhh-removebg-previe.jpeg" alt="Extreme" class="promo-item-image">
+                    <div class="promo-item-content">
+                        <h3 class="promo-item-title">Extreme</h3>
+                        <p class="promo-item-desc">Fresh & Citrus</p>
+                        <a href="#" class="promo-item-link">SHOP NOW</a>
+                    </div>
+                </div>
+
+                <!-- Only Choice -->
+                <div class="promo-item">
+                    <img src="Images/fffggghhh-removebg-previe.jpeg" alt="Only Choice" class="promo-item-image">
+                    <div class="promo-item-content">
+                        <h3 class="promo-item-title">Only Choice</h3>
+                        <p class="promo-item-desc">Elegant Rose</p>
+                        <a href="#" class="promo-item-link">SHOP NOW</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h4>About Dezlen</h4>
+                <p>Dezlen Perfume is your ultimate destination for luxurious and long-lasting fragrances. Discover scents that make memories.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="why-dezlen.html">Why Dezlen Perfume</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Contact Us</h4>
+                <p>Email: support@dezlenperfume.com</p>
+                <p>Phone: 8438212882</p>
+                <p>Address: Broadway Chennai-600001</p>
+            </div>
+            <div class="footer-column">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/dezlen.official/" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.facebook.com" target="_blank">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="https://t.me/Asfakdezlen" target="_blank">
+                        <i class="fab fa-telegram"></i>
+                    </a>
+                    <a href="https://wa.me/8438212882" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <hr class="footer-divider">
+        <p class="copyright">&copy; 2025 Dezlen Perfume. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
